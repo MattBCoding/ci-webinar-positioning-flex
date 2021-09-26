@@ -7,26 +7,44 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --dark: #2d314d;
+    --light: #525f7e;
+    --primary: #b0c4de;
+    --secondary: #d0a616;
+    --offwhite: #eceeff;
+}
+
+body {
+    background: var(--offwhite);
 }
 
 header {
     height: 150px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkblue;
+    background-color: var(--dark);
     color: #fff;
     padding: 0 20px;
 }
 
+/* ------------------------- Sticky Position Header example */
+
+/* header {
+    position: sticky;
+    top: 0px;
+
+} */
+
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 nav ul{
     display: flex;
     list-style: none;
-    width: 400px;
+    width: auto;
     justify-content: space-between;
 }
 
@@ -35,31 +53,40 @@ nav li a {
     margin-left: 20px;
     color: #fff;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 #positioning {
     padding-left: 20px;
+    margin-top: 30px;
 }
 
 section {
+    margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.block {
-    background-color: lightslategray;
-    height: 50px;
-    text-align: center;
-    border: 1px solid black;
+section p {
+    margin-bottom: 30px;
 }
 
-.inline {
-    background-color: lightgreen;
+.block {
+    background-color: var(--light);
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    border: 1px solid var(--offwhite);
+}
+
+#no-margin-p {
+    margin: 0;
 }
 
 .container {
     height: 800px;
-    background-color: lightsteelblue;
+    background-color: var(--secondary);
     padding: 25px;
 }
 
@@ -67,20 +94,21 @@ section {
     box-sizing: border-box;
     height: 150px;
     width: 150px;
-    border: 5px solid #000;
     border-radius: 25px;;
-    background-color: yellow;
+    background-color: var(--light);
     text-align: center;
-    line-height: 130px;
+    line-height: 150px;
+    color: #fff;
+    font-size: 1.75rem;
 }
 
 /* ---------------------- Position Absolute example */
 
-/* #two {
+#two {
     position:absolute;
     top: 100px;
     left: 250px;
-} */
+}
 
 .absolute {
     position: relative;
@@ -109,9 +137,9 @@ section {
 
 
 
-.container-sticky {
+#container-sticky {
     height: auto;
-    background-color: lightsteelblue;
+    background-color: var(--primary);
     padding: 25px;
     position: relative;
 }
@@ -120,4 +148,91 @@ section {
     position: sticky;
     top: 100px;
     left: 300px;
+}
+
+#position {
+    position: relative;
+    background-color: var(--primary);
+}
+
+#position span{
+    display: inline-block;
+    height: 80px;
+    width: 200px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: var(--light);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fas {
+    font-size: 2rem;
+}
+
+.top {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#z-index {
+    position: relative;
+}
+
+#z-index > div {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 75px;
+}
+
+.layer1 {
+    background-color: var(--dark);
+    color: #fff;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    z-index: 5;
+}
+
+.layer2 {
+    background-color: var(--light);
+    color:#fff;
+    position: absolute;
+    top: 325px;
+    left: 475px;
+    z-index: 4;
+}
+
+.layer3 {
+    background-color: var(--primary);
+    position: absolute;
+    top: 400px;
+    left: 550px;
+    z-index: 3;
 }
