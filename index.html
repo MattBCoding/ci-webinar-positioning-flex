@@ -9,26 +9,48 @@
     <title>Flex and Position Webinar</title>
 </head>
 <body>
-    <h1>CSS Positioning</h1>
+    <header>
+        <h1>Positioning Examples</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#absolute">Absolute</a>
+                </li>
+                <li>
+                    <a href="#relative">Relative</a>
+                </li>
+                <li>
+                    <a href="#fixed">Fixed</a>
+                </li>
+                <li>
+                    <a href="#container-sticky">Sticky</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h2 id='positioning'>CSS Positioning</h2>
     <section>
         <h2>Document Flow</h2>
         <p>Whenever you use CSS positioning you are modifying the document flow. What do we mean by the document flow? HTML elements appear in the order in which they are written, with each element having its own default display type.</p>
         <div class="block">Div's</div>
         <p class="block">P - Paragraphs</p>
         <ul class="block">UL - lists</ul>
-        <h3>Headings - h1, h2, h3, h4, h5, h6</h3>
+        <h3 class='block'>Headings - h1, h2, h3, h4, h5, h6</h3>
         <span class="inline">Span's</span>
-        <img src="./assets/images/chalkboard-250.jpg" alt="Three guy's trying to work out their media queries">
-        <a href="https://css-tricks.com/guides/">CSS Tricks</a>
+        <img class='inline' src="./assets/images/chalkboard-250.jpg" alt="Three guy's trying to work out their media queries">
+        <a class='inline' href="https://css-tricks.com/guides/">CSS Tricks</a>
+        <img src="./assets/images/chalkboard-100.jpg" alt="Three guy's trying to work out their media queries">
+        <img class='inline' src="./assets/images/chalkboard-250.jpg" alt="Three guy's trying to work out their media queries">
+        <img src="./assets/images/chalkboard-100.jpg" alt="Three guy's trying to work out their media queries">
     </section>
     <section>
         <h2>Position Absolute</h2>
-        <p>Takes things out of the document flow</p>
+        <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
         <div class="container absolute">
-            <div class="box">One</div>
-            <div class="box">Two</div>
-            <div class="box">Three</div>
-            <div class="box">Four</div>
+            <div class="box" id='one'>One</div>
+            <div class="box" id='two'>Two</div>
+            <div class="box" id='three'>Three</div>
+            <div class="box" id='four'>Four</div>
             <i class="fas fa-arrow-circle-up"></i>
             <i class="fas fa-arrow-circle-down"></i>
             <i class="fas fa-arrow-circle-left"></i>
@@ -37,11 +59,12 @@
     </section>
     <section>
         <h2>Position Relative</h2>
+        <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
         <div class="container relative">
-            <div class="box">One</div>
-            <div class="box">Two</div>
-            <div class="box">Three</div>
-            <div class="box">Four</div>
+            <div class="box" id='five'>Five</div>
+            <div class="box" id='six'>Six</div>
+            <div class="box" id='seven'>Seven</div>
+            <div class="box" id='eight'>Eight</div>
             <i class="fas fa-arrow-circle-up"></i>
             <i class="fas fa-arrow-circle-down"></i>
             <i class="fas fa-arrow-circle-left"></i>
@@ -50,11 +73,12 @@
     </section>
     <section>
         <h2>Position Fixed</h2>
-        <div class="container relative">
-            <div class="box">One</div>
-            <div class="box">Two</div>
-            <div class="box">Three</div>
-            <div class="box">Four</div>
+        <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
+        <div class="container fixed">
+            <div class="box" id='nine'>Nine</div>
+            <div class="box" id='ten'>Ten</div>
+            <div class="box" id='eleven'>Eleven</div>
+            <div class="box" id='twelve'>Twelve</div>
             <i class="fas fa-arrow-circle-up"></i>
             <i class="fas fa-arrow-circle-down"></i>
             <i class="fas fa-arrow-circle-left"></i>
@@ -63,23 +87,74 @@
     </section>
     <section>
         <h2>Position Sticky</h2>
-        <div class="container relative">
-            <div class="box">One</div>
-            <div class="box">Two</div>
-            <div class="box">Three</div>
-            <div class="box">Four</div>
-            <i class="fas fa-arrow-circle-up"></i>
-            <i class="fas fa-arrow-circle-down"></i>
-            <i class="fas fa-arrow-circle-left"></i>
-            <i class="fas fa-arrow-circle-right"></i>
+        <p>This allows you to position something relative to the container element, until a condition is met. Then it becomes fixed. NOTE: This is all in relation to the containing element. So if you put position sticky on an element within the body, it'll be in relation to the entire page. If you put it on another element, it will become sticky or fixed, until it reaches the opposite edge of the container. Then it'll go back to relative.</p>
+        <div class="container-sticky">
+            <div class="box" id='one-sticky'>One</div>
+            <div class="box" id='two-sticky'>Two</div>
+            <div class="box" id='three-sticky'>Three</div>
+            <div class="box" id='four-sticky'>Four</div>
+            <div class="box" id='five-sticky'>Five</div>
+            <div class="box" id='six-sticky'>Six</div>
+            <div class="box" id='seven-sticky'>Seven</div>
+            <div class="box" id='eight-sticky'>Eight</div>
+            <div class="box" id='nine-sticky'>Nine</div>
+            <div class="box" id='ten-sticky'>Ten</div>
+            <div class="box" id='eleven-sticky'>Eleven</div>
+            <div class="box" id='twelve-sticky'>Twelve</div>
         </div>
     </section>
-
-
-
-    <i class="fas fa-arrow-circle-up"></i>
-    <i class="fas fa-arrow-circle-down"></i>
-    <i class="fas fa-arrow-circle-left"></i>
-    <i class="fas fa-arrow-circle-right"></i>
+    <section>
+        <h2>Other Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at beatae adipisci omnis, sed distinctio voluptas ea repudiandae laboriosam et! Nesciunt deleniti, harum asperiores perspiciatis veritatis reprehenderit neque recusandae tempora.
+        Officia, velit magnam perferendis perspiciatis expedita error ratione quaerat repellat corrupti aspernatur. Quod nemo voluptate nihil deleniti nulla, exercitationem iusto. Iste architecto molestias inventore numquam nesciunt, sunt consectetur veniam rerum?
+        Consequuntur officiis veritatis qui magnam excepturi blanditiis sunt, hic nisi animi. Et minima voluptas soluta mollitia molestiae aut vitae quasi non recusandae perferendis quos omnis, id quia cum velit! Hic.
+        Exercitationem ipsa doloremque, libero corrupti molestias harum nihil laudantium nesciunt fuga! Dolorem eos corporis inventore vero enim sapiente ipsum quaerat dicta minus, nam architecto quod. Ut sequi architecto repudiandae ullam!
+        Molestiae repellendus libero voluptatum doloremque totam cumque dolore eveniet ab soluta laudantium eos enim architecto inventore, repudiandae similique a reiciendis iste. Cum voluptatem nobis possimus fugiat ullam eius ratione iure?
+        Impedit sed minus aperiam soluta iure suscipit molestiae cupiditate autem. Cum reiciendis voluptatum nesciunt dolor voluptas nulla libero sapiente facilis ullam. Enim a porro omnis alias officiis explicabo mollitia quas.
+        Laudantium commodi, architecto possimus vero tenetur nostrum ab molestias temporibus sint eveniet animi eaque autem. Laborum reiciendis praesentium dolorem maxime. Exercitationem sapiente harum molestias corrupti doloribus quo ea reprehenderit officia.
+        Laborum ratione nobis reprehenderit repellendus minima, nisi dolores dolorem ipsa laboriosam voluptatem repudiandae quidem eum eveniet sed debitis error, omnis distinctio expedita odit iusto. Quaerat earum veniam architecto nulla consequatur.
+        Deserunt delectus, est eveniet voluptate non alias provident eius, facilis vel fugit neque porro rerum quia totam maiores, laboriosam adipisci quis iure ratione officiis. Velit porro dicta laboriosam placeat nihil!
+        Assumenda rem recusandae odit ex voluptates ratione dolor reprehenderit quis voluptatem explicabo vitae labore, laudantium quisquam animi amet error officiis, magnam repellendus et aut sequi. Quo vel atque neque molestiae!
+        Ipsam reiciendis illo quam voluptatibus magnam iusto, unde earum ratione, amet laboriosam vero quibusdam! Dolore, placeat dignissimos voluptatem temporibus cupiditate reiciendis, unde molestiae neque est enim ullam beatae nulla similique.
+        Sapiente iste aspernatur iusto illo excepturi animi, alias ipsum vel sit non cumque consequatur inventore vitae dolorum dolore quae expedita molestiae distinctio delectus quaerat voluptates commodi ipsa neque. Perferendis, natus.
+        Ipsa numquam corporis dolorem assumenda nobis voluptatem voluptas laborum debitis fuga eum, ullam pariatur? Repellat corporis quaerat mollitia eius beatae delectus consequuntur, ex quam. A aliquid possimus blanditiis deleniti iste.
+        Ea, soluta nostrum iusto inventore in rem cumque culpa qui molestias corrupti minus quos sapiente tempore eligendi eum, iste, esse omnis! Delectus ipsum repellendus dignissimos tenetur quaerat perspiciatis tempore ea.
+        Tempora velit repudiandae cum omnis reiciendis enim ea pariatur dolorem libero accusamus, sequi commodi porro consequuntur corrupti odit dolorum aliquid praesentium vitae saepe incidunt! Amet dolores ipsum minus accusamus cumque?
+        Aut, nobis dicta? Facere tenetur fugit autem ullam iure maxime culpa quaerat. Et quo rerum veniam odit voluptatem deserunt, quia asperiores adipisci corrupti eveniet animi ad nam necessitatibus autem ut!
+        Quaerat voluptate officiis recusandae quo illo accusantium soluta doloribus sequi veritatis nihil qui porro explicabo veniam voluptatibus, facilis ad consequuntur quia fugiat nam? Ratione modi consequuntur porro sapiente iure beatae!
+        Exercitationem, itaque soluta. Aperiam placeat nesciunt eligendi modi. Voluptatem magnam maxime sunt qui dolores, ratione, minima minus necessitatibus voluptatibus nostrum facere, corrupti repudiandae distinctio quod reiciendis autem quidem? Beatae, nihil.
+        Fuga error dignissimos illum dolorum omnis cum! Vero natus distinctio optio eaque, veniam tenetur sapiente perferendis error atque, et eum. Quidem maxime reprehenderit libero dignissimos ab voluptatibus perspiciatis fuga eos!
+        Dolorum iure dolores nesciunt amet ratione molestias, ut quaerat quae voluptate fugiat, atque perspiciatis, aperiam sapiente non doloribus explicabo tenetur ea beatae error laborum similique neque! Iste fugit veritatis esse.
+        Distinctio iusto quos qui voluptatem ipsam totam, quas reprehenderit libero voluptates dolorem vel facilis, quia temporibus. Suscipit, quaerat explicabo perferendis, ad rerum iste autem, beatae error illum ducimus maxime repellat!
+        Eum nobis a reprehenderit aspernatur, corrupti non. Nihil eos, corrupti quis hic earum minima repudiandae quaerat. Tenetur hic, fuga et dolorem id quo sapiente autem, ex deleniti, minima qui dolor?
+        Deserunt sed, doloremque deleniti veniam quo amet, adipisci, iusto reiciendis doloribus at obcaecati asperiores! Dolor ab libero quis quaerat autem, delectus illum cumque quos sapiente exercitationem quisquam earum similique molestiae.
+        Nam suscipit odit quisquam! Necessitatibus a quisquam beatae nam quasi laboriosam mollitia, alias eaque, perspiciatis ducimus perferendis saepe, cum porro quo amet nostrum eligendi dignissimos esse optio. Quae, magnam eveniet.
+        Facilis, tempore. Sed adipisci dolorem dignissimos veritatis. Veritatis optio neque recusandae obcaecati iusto, quo, ipsa necessitatibus modi vitae officiis, reiciendis maxime itaque rerum aliquid quas nesciunt sunt nemo magnam repellendus.
+        Culpa cumque mollitia officia nam quidem porro laudantium est illo amet aperiam. Expedita voluptatem neque, beatae eaque, illo dignissimos velit, optio recusandae delectus harum accusantium? Iste error culpa incidunt corporis.
+        Nemo quasi facere voluptas tempore inventore qui autem consequuntur sequi deserunt! Quia amet modi non aliquid numquam, asperiores necessitatibus, ratione animi architecto, nam aspernatur delectus minima. Dolor nostrum quaerat dicta?
+        Perspiciatis, rerum beatae, sit quibusdam quasi exercitationem tempore aspernatur architecto maxime est excepturi aliquid commodi. Magni, dolore sapiente porro qui tenetur eligendi iste ad modi harum culpa eum nostrum natus.
+        Aspernatur repellendus adipisci molestiae eligendi praesentium consequatur tempore incidunt dolore fugit error! Veniam eum, officia adipisci iure iste itaque ducimus minus aliquam quia quidem ut dignissimos non, ea, asperiores illum.
+        Reiciendis voluptatibus ullam accusantium consequuntur dolorem, ipsa accusamus perspiciatis provident consequatur eum eos corrupti in. Similique, ea quisquam magnam autem veniam omnis facere, blanditiis nesciunt quibusdam, voluptates nobis odit impedit?
+        Minus voluptatem voluptatibus commodi, officiis eos cupiditate nisi vitae, autem ratione voluptatum ex incidunt neque reprehenderit odio ea. Fugiat placeat alias et, temporibus assumenda voluptate officiis eaque minus totam in!
+        Voluptatem, earum iure voluptatibus molestias necessitatibus quas. Qui officia, temporibus veritatis aspernatur maxime sed eveniet doloribus mollitia minus. Vel, praesentium pariatur! Pariatur vero dolorum quidem, distinctio reprehenderit suscipit accusamus repellendus!
+        Alias labore illo sint suscipit nihil, assumenda odio aperiam natus in maxime quod voluptatem explicabo officiis voluptatibus quia veniam, expedita pariatur ipsam adipisci impedit eaque? Quis tempore dolorem minima odit?
+        Dolores perferendis molestias atque quos doloribus culpa facere rem earum quo itaque, sed non quaerat impedit quia laudantium nam dicta similique cupiditate! Alias sequi odit beatae voluptatibus magni error nulla?
+        Provident, neque numquam. Harum provident quasi aspernatur quis similique veniam perferendis molestiae adipisci deserunt, dolores ipsum, amet vero facilis porro sunt eius delectus. Repellat soluta alias accusamus ducimus ipsam voluptatem!
+        Consectetur, similique suscipit. Ullam assumenda amet ex, dolorem architecto labore. Tenetur quam quia dolor nobis tempora libero quos non, ex voluptatem velit? Itaque eaque, dicta quis expedita recusandae accusamus magnam.
+        Ullam illum hic sit fuga at quod ducimus consequatur accusamus facere quidem saepe molestiae quas, eaque distinctio assumenda quisquam magni cupiditate delectus modi tenetur et. Illum enim quae magni tenetur.
+        Ullam aliquam maiores ad cum fuga quam a porro. Consequuntur aliquam ullam nostrum suscipit ut quidem non consectetur laborum, itaque, eveniet, veniam aperiam eum blanditiis voluptatum recusandae porro velit laudantium!
+        Harum amet quia voluptas magni earum, omnis, deleniti maxime placeat dolores iure, consequuntur quidem nam aliquid molestiae tempore pariatur? Ad eos dolore quia et beatae nostrum consectetur adipisci explicabo fugiat.
+        Vero, alias temporibus reiciendis odio adipisci beatae porro fugiat quidem. Ea facere cum laborum, eum dignissimos, sit, assumenda sunt maxime delectus quam soluta quo vero omnis! Quas dolore sint error.
+        Error dolorum beatae veritatis sint rerum quisquam a, recusandae dolore ratione quod minus cumque aperiam maiores nulla assumenda asperiores, accusantium veniam repellat totam odio natus. Quas, enim! Sequi, ut aliquam.
+        Enim aperiam pariatur consequatur praesentium non fuga? Accusamus praesentium dolorem quo. Saepe sequi iste laborum, placeat, eius sed eveniet temporibus ex dolorem fuga officia quas architecto cumque laudantium quasi eos.
+        Quaerat ullam neque autem. Natus distinctio, eius eum, aut laudantium aliquam ad odit praesentium nemo tempora consequatur dolore dolor porro, iure fuga hic suscipit rerum ipsam! Quos adipisci ea voluptatum?
+        Ab impedit unde saepe incidunt molestias libero sit perspiciatis accusamus neque voluptates? Nam debitis ex, eaque quae vero libero possimus consequuntur? Dolorem pariatur unde recusandae maxime asperiores aliquid, culpa dolorum!
+        Modi distinctio quos quam quidem impedit, veniam a consequuntur cumque, ad officiis quibusdam rerum facilis error, numquam tenetur blanditiis libero eius voluptates! Corrupti officia omnis possimus repellendus tenetur ad ab.
+        Modi commodi, quam ipsa voluptatem dolorem magnam, laudantium architecto ipsam reiciendis fugit, vero perspiciatis veniam non ducimus accusantium fuga assumenda obcaecati? Ullam sequi magnam aperiam! Repellendus similique accusamus quo asperiores?
+        Pariatur debitis, beatae ipsam optio a alias expedita sint ea omnis nemo amet corrupti illo id consequuntur est recusandae nisi nostrum, perferendis veritatis nesciunt asperiores atque? Nobis tempore nihil modi!
+        Exercitationem perferendis rerum architecto repellat eos distinctio voluptatum in. Aliquid commodi deserunt tempore atque possimus ea eaque ullam voluptatibus cupiditate, natus deleniti dicta sequi pariatur voluptas, nam, aut sit laboriosam?
+        Nam ratione ducimus, fugiat possimus ullam dignissimos ad autem necessitatibus quos cumque porro, nobis ex, reprehenderit quis! Voluptatum, dolore ipsa deserunt tempore nulla quod sit ad eius nihil qui ex!
+        Minima modi aliquam aut, rem iusto nobis adipisci deleniti corrupti natus iure veniam quidem unde ab, incidunt delectus fugit ad pariatur obcaecati deserunt itaque voluptate. Autem quis nesciunt blanditiis facilis?</p>
+    </section>
 </body>
 </html>
