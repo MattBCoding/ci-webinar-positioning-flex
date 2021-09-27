@@ -36,11 +36,14 @@
         <div class="grid-container">
             <div class="main-size"><p>Main Size</p></div>
             <div class="cross-size"><p>Cross Size</p></div>
-            <div class="flex-container">
-                <div class="flex-item" id='flex-item-1'>1<p id='flex-item-1-p'>flex-item</p></div>
-                <div class="flex-item" id='flex-item-2'>2<p id='flex-item-2-p'>flex-item</p></div>
+            <div class="flex-container-main">
+                <div class="flex-item-main" id='flex-item-1'>1<p id='flex-item-1-p'>flex-item</p></div>
+                <div class="flex-item-main" id='flex-item-2'>2<p id='flex-item-2-p'>flex-item</p></div>
                 <p id='flex-container-1'>flex-container</p>
-                
+                <i class="arrow right"></i>
+                <i class="arrow down"></i>
+                <div class="downline"></div>
+                <div class="rightline"></div>
             </div>
             <div class="crossstart"><p>Cross Start</p></div>
             <div class="mainaxis"><p>Main Axis</p></div>
@@ -48,8 +51,32 @@
             <div class="mainstart"><p>Main Start</p></div>
             <div class="crossaxis"><p>Cross Axis</p></div>
             <div class="mainend"><p>Main End</p></div>
-            
         </div>
+        <p>
+            Items will be laid out following either the main axis
+            (from main-start to main-end) or the cross axis (from cross-start to cross-end).<br><br>
+            
+            <strong>main axis</strong> – The main axis of a flex container is the primary axis along which flex items are laid out. Beware, it is not necessarily 
+            horizontal; it depends on the flex-direction property.<br>
+            <strong>main-start | main-end</strong> – The flex items are placed within the container starting from main-start and going to main-end.<br>
+            <strong>main size</strong> – A flex item’s width or height, whichever is in the main dimension, is the item’s main size. The flex item’s main size property 
+            is either the ‘width’ or ‘height’ property, whichever is in the main dimension.<br>
+            <strong>cross axis</strong> – The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction.<br>
+            <strong>cross-end</strong> – Flex lines are filled with items and placed into the container starting on the cross-start side of the flex 
+            container and going toward the cross-end side.<br>
+            <strong>cross size</strong> – The width or height of a flex item, whichever is in the cross dimension, is the item’s cross size. The cross size property is 
+            whichever of ‘width’ or ‘height’ that is in the cross dimension.</p>
+    </section>
+    <section class='flex-direction'>
+        <h2>Flex Direction</h2>
+        <p>Flex direction defines the axis in which the container should stack the flex items. Rows are horizontal whilst Columns are vertical.</p>
+        <div class="flex-direction-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+
     </section>
 </body>
 </html>

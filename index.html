@@ -112,13 +112,13 @@
         <h2>Position Fixed</h2>
         <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
         <div class="container fixed" id='position'>
-            <span class='top'><i class="fas fa-arrow-circle-up"> Top</i></span>
-            <span class='bottom'><i class="fas fa-arrow-circle-down"> Bottom</i></span>
-            <span class='left'><i class="fas fa-arrow-circle-left"> Left</i></span>
-            <span class='right'><i class="fas fa-arrow-circle-right"> Right</i></span>
+            <span class='top-position'><i class="fas fa-arrow-circle-up"> Top</i></span>
+            <span class='bottom-position'><i class="fas fa-arrow-circle-down"> Bottom</i></span>
+            <span class='left-position'><i class="fas fa-arrow-circle-left"> Left</i></span>
+            <span class='right-position'><i class="fas fa-arrow-circle-right"> Right</i></span>
         </div>
     </section>
-    <section>
+    <section id='last-section'>
         <h2>Z-Index</h2>
         <p>Z-Index specifies the layer order of elements. If you think the X axis is left to right, and the Y axis is up and down. The Z axis is towards the reader and away. It controls the layer order of the elements. The higher the number the closer to the reader the element appears. Values can be positive numbers or negative. Z-Index only works on positioned elements (absolute, relative, fixed, sticky) and flex items. If two elements overlap, and they have either the same z-index value, or none specified, the elements will appear in the order they appear in the HTML</p>
         <div class="container fixed" id='z-index'>

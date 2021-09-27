@@ -170,28 +170,28 @@ section p {
     font-size: 2rem;
 }
 
-.top {
+.top-position {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.bottom {
+.bottom-position {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.left {
+.left-position {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.right {
+.right-position {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -237,6 +237,10 @@ section p {
     z-index: 3;
 }
 
+#last-section {
+    margin-bottom: 50px;
+}
+
 /* START OF FLEXBOX PAGE STYLE RULES */
 .grid-container {
     display: grid;
@@ -251,7 +255,7 @@ section p {
     padding: 50px;
     grid-template-rows: 30px 1fr 1fr 1fr 30px;
     grid-template-columns: 30px 1fr 1fr 1fr 60px;
-
+    margin-bottom: 30px;;
 }
 
 .grid-container p {
@@ -348,7 +352,7 @@ section p {
     color: #fff;
 }
 
-.flex-container {
+.flex-container-main {
     grid-area: flex;
     display: flex;
     background-color: var(--primary);
@@ -358,7 +362,7 @@ section p {
     border: 5px solid #000;
 }
 
-.flex-item {
+.flex-item-main {
     background-color: var(--secondary);
     height: 250px;
     border: 5px solid #000;
@@ -396,3 +400,70 @@ section p {
     font-size: 1rem;
 }
 
+.arrow {
+    border: solid red;
+    border-width: 0 16px 16px 0;
+    display: inline-block;
+    padding: 16px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    right: 10px;
+    top: 215px;
+}
+  
+.down {
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.rightline {
+    background-color: red;
+    height: 8px;
+    width: 99%;
+    position: absolute;
+    left: 0;
+    top: 235px;
+}
+
+.downline {
+    background-color: red;
+    height: 98%;
+    width: 8px;
+    position: absolute;
+    left: calc(50% + 24px);
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.flex-direction {
+    background-color: var(--dark);
+    color: #fff;
+    padding: 20px;
+}
+
+.flex-direction-container {
+    display: flex;
+    height: 600px;
+    background-color: var(--primary);
+    flex-direction: row-reverse;
+}
+
+.flex-direction-container > div {
+    height: 125px;
+    width: 25%;
+    background-color: var(--secondary);
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 6rem;
+}
