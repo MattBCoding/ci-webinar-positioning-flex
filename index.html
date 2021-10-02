@@ -32,12 +32,15 @@
         </nav>
     </header>
     <h2 id='positioning'>CSS Positioning</h2>
+
+    <!-- document flow example -->
+
     <section>
         <h2>Document Flow</h2>
         <p>Whenever you use CSS positioning you are modifying the document flow. What do we mean by the document flow? HTML elements appear in the order in which they are written, with each element having its own default display type.</p>
         <div class="block">Div's</div>
         <p class="block" id='no-margin-p'>P - Paragraphs</p>
-        <ul class="block">UL - lists</ul>
+        <ul class="block" id='narrow-list'>UL - lists</ul>
         <h3 class='block'>Headings - h1, h2, h3, h4, h5, h6</h3>
         <span class="inline">Span's</span>
         <img class='inline' src="./assets/images/chalkboard-250.jpg" alt="Three guy's trying to work out their media queries">
@@ -58,6 +61,9 @@
         <img class='inline' src="./assets/images/chalkboard-250.jpg" alt="Three guy's trying to work out their media queries">
         <img src="./assets/images/chalkboard-100.jpg" alt="Three guy's trying to work out their media queries">
     </section>
+    
+    <!-- position absolute example -->
+
     <section>
         <h2>Position Absolute</h2>
         <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
@@ -68,6 +74,9 @@
             <div class="box" id='four'>Four</div>
         </div>
     </section>
+    
+    <!-- position relative example -->
+
     <section>
         <h2>Position Relative</h2>
         <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
@@ -79,6 +88,9 @@
 
         </div>
     </section>
+
+    <!-- position fixed example -->
+
     <section>
         <h2>Position Fixed</h2>
         <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
@@ -87,9 +99,11 @@
             <div class="box" id='ten'>Ten</div>
             <div class="box" id='eleven'>Eleven</div>
             <div class="box" id='twelve'>Twelve</div>
-
         </div>
     </section>
+
+    <!-- position sticky example -->
+
     <section>
         <h2>Position Sticky</h2>
         <p>This allows you to position something relative to the container element, until a condition is met. Then it becomes fixed. NOTE: This is all in relation to the containing element. So if you put position sticky on an element within the body, it'll be in relation to the entire page. If you put it on another element, it will become sticky or fixed, until it reaches the opposite edge of the container. Then it'll go back to relative.</p>
@@ -108,9 +122,12 @@
             <div class="box" id='twelve-sticky'>Twelve</div>
         </div>
     </section>
+
+    <!-- position fixed example -->
+
     <section>
-        <h2>Position Fixed</h2>
-        <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
+        <h2>Positioning Keywords</h2>
+        <p>There are four positioning keywords, top, bottom, left and right. They accept any unit of measure as a value, so px's em's %'s or viewport units will work.' </p>
         <div class="container fixed" id='position'>
             <span class='top-position'><i class="fas fa-arrow-circle-up"> Top</i></span>
             <span class='bottom-position'><i class="fas fa-arrow-circle-down"> Bottom</i></span>
@@ -118,6 +135,9 @@
             <span class='right-position'><i class="fas fa-arrow-circle-right"> Right</i></span>
         </div>
     </section>
+
+    <!-- z-index example -->
+
     <section id='last-section'>
         <h2>Z-Index</h2>
         <p>Z-Index specifies the layer order of elements. If you think the X axis is left to right, and the Y axis is up and down. The Z axis is towards the reader and away. It controls the layer order of the elements. The higher the number the closer to the reader the element appears. Values can be positive numbers or negative. Z-Index only works on positioned elements (absolute, relative, fixed, sticky) and flex items. If two elements overlap, and they have either the same z-index value, or none specified, the elements will appear in the order they appear in the HTML</p>
