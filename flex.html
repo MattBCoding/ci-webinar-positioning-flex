@@ -67,24 +67,106 @@
             <strong>cross size</strong> – The width or height of a flex item, whichever is in the cross dimension, is the item’s cross size. The cross size property is 
             whichever of ‘width’ or ‘height’ that is in the cross dimension.</p>
     </section>
-    <section class='flex-direction'>
+    <section class='flex-section'>
         <h2>Flex Direction</h2>
         <p>Flex direction defines the axis in which the container should stack the flex items. Rows are horizontal whilst Columns are vertical.</p>
-        <div class="flex-direction-container">
+        <p>There are four options available with row being the default.<br> row, row-reverse, column & column-reverse</p>
+        <select name="direction" id="direction-select">
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+        </select>
+        <div class="flex" id='flex-direction'>
             <div>1</div>
             <div>2</div>
             <div>3</div>
-            <!-- <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div> -->
         </div>
     </section>
-    
+    <section class='flex-section'>
+        <h2>Flex Wrap</h2>
+        <p>Flex direction defines the axis in which the container should stack the flex items. Rows are horizontal whilst Columns are vertical.</p>
+        <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+        <select name="wrap" id="wrap-select">
+            <option value="nowrap">nowrap</option>
+            <option value="wrap">wrap</option>
+            <option value="wrap-reverse">wrap-reverse</option>
+        </select>
+        <div class="flex flex-wrap-container" id='flex-wrap'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </section>
+    <section class='flex-section'>
+        <h2>Flex Flow</h2>
+        <p>Flex </p>
+        <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+        <select name="flow" id="flow-select">
+            <option value="row nowrap">row nowrap</option>
+            <option value="row wrap">row wrap</option>
+            <option value="row wrap-reverse">wrap-reverse</option>
+            <option value="row-reverse nowrap">row-reverse nowrap</option>
+            <option value="row-reverse wrap">row-reverse wrap</option>
+            <option value="row-reverse wrap-reverse">row-reverse wrap-reverse</option>
+            <option value="column nowrap">column nowrap</option>
+            <option value="column wrap">column wrap</option>
+            <option value="column wrap-reverse">column wrap-reverse</option>
+            <option value="column-reverse nowrap">column-reverse nowrap</option>
+            <option value="column-reverse wrap">column-reverse wrap</option>
+            <option value="column-reverse wrap-reverse">column-reverse wrap-reverse</option>
+        </select>
+        <div class="flex flex-flow-container" id='flex-flow'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </section>
+    <section class='flex-section'>
+        <h2>Justify Content</h2>
+        <p>Flex </p>
+        <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+        <select name="flow" id="justify-content-select">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+        </select>
+        <div class="flex justify-content-container" id='justify-content'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </section>
+    <section class='flex-section'>
+        <h2>Align Items</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <select name="flow" id="align-items-select">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="stretch">stretch</option>
+            <option value="baseline">baseline</option>
+        </select>
+        <div class="flex align-items-container" id='align-items'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </section>
+
+
+
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
