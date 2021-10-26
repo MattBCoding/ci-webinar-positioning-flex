@@ -163,6 +163,47 @@
             <div>3</div>
         </div>
     </section>
+    <section class='flex-section'>
+        <h2>Align Content</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <select name="flow" id="align-content-select">
+            <option value="normal">normal</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="stretch">stretch</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+        </select>
+        <div class="flex align-content-container" id='align-content'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </section>
+    <section class='flex-section'>
+        <h2>Gap, row-gap, column-gap</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <div id="gap-select">
+            <label for="gap-slider">gap</label>
+            <input type="range" min="0" max="500" value="0" class="slider" id="gap-slider">
+            <span id="slider-value">0px</span>
+        </div>
+        <div class="flex gap-container" id='gap'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </section>
 
 
 

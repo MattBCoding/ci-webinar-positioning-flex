@@ -478,6 +478,7 @@ section p {
 #flex-flow {
     resize: both;
     overflow: auto;
+    min-height: 400px;
 }
 
 #align-items {
@@ -496,4 +497,29 @@ section p {
     font-size: 6rem;
     text-align: center;
     padding: 3rem;
+}
+
+#align-content {
+    flex-wrap: wrap;
+    resize: both;
+    overflow: auto;
+    min-height: 400px;
+}
+
+#align-content > div {
+    width: 400px;
+}
+
+#gap-select {
+    width: 100%;
+}
+
+#gap-slider {
+    width: 30%;
+    min-width: 320px;
+}
+
+#gap {
+    flex-wrap: wrap;
+    align-content: center;
 }

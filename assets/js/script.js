@@ -13,6 +13,12 @@ justifyContentSelect.addEventListener('click', changeJustifyContent);
 let alignItemsSelect = document.getElementById('align-items-select');
 alignItemsSelect.addEventListener('click', changeAlignItems);
 
+let alignContentSelect = document.getElementById('align-content-select');
+alignContentSelect.addEventListener('click', changeAlignContent);
+
+let gapSelect = document.getElementById('gap-slider');
+gapSelect.addEventListener('click', changeGap);
+
 function changeDirection() {
     console.log(flexDirectionSelect.value);
     document.getElementById('flex-direction').style.flexDirection = flexDirectionSelect.value;
@@ -37,3 +43,19 @@ function changeAlignItems() {
     console.log(alignItemsSelect.value);
     document.getElementById('align-items').style.alignItems = alignItemsSelect.value;
 }
+
+function changeAlignContent() {
+    console.log(alignContentSelect.value);
+    document.getElementById('align-content').style.alignContent = alignContentSelect.value;
+}
+
+function changeGap() {
+    console.log(gapSelect.value);
+    document.getElementById('gap').style.gap = gapSelect.value + 'px';
+    document.getElementById('slider-value').innerHTML = gapSelect.value + 'px';
+}
+
+
+
+
+
