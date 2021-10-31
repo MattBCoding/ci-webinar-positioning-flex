@@ -19,6 +19,19 @@ alignContentSelect.addEventListener('click', changeAlignContent);
 let gapSelect = document.getElementById('gap-slider');
 gapSelect.addEventListener('click', changeGap);
 
+let orderSelect = document.getElementById('order-select');
+orderSelect.addEventListener('click', changeOrder);
+
+let orderInputs = [document.getElementById('order-input-1'),
+                    document.getElementById('order-input-2'),
+                    document.getElementById('order-input-3'),
+                    document.getElementById('order-input-4')];
+orderInputs.forEach(element => {
+    element.addEventListener('change', changeOrder);
+});
+
+
+
 function changeDirection() {
     document.getElementById('flex-direction-span').innerHTML = flexDirectionSelect.value + ';';
     document.getElementById('flex-direction').style.flexDirection = flexDirectionSelect.value;
@@ -61,7 +74,42 @@ function changeGap() {
     document.getElementById('slider-value').innerHTML = gapSelect.value + 'px';
 }
 
-
+function changeOrder() {
+    let orderInput1 = document.getElementById('order-input-1').value;
+    let orderInput2 = document.getElementById('order-input-2').value;
+    let orderInput3 = document.getElementById('order-input-3').value;
+    let orderInput4 = document.getElementById('order-input-4').value;
+    
+    if (orderInput1 != 0) {
+        document.getElementById('code-snippet-order-1').style.display = 'inline';
+        document.getElementById('order-span-1').innerHTML = orderInput1 + ';';
+    } else {
+        document.getElementById('code-snippet-order-1').style.display = 'none';
+    }
+    if (orderInput2 != 0) {
+        document.getElementById('code-snippet-order-2').style.display = 'inline';
+        document.getElementById('order-span-2').innerHTML = orderInput2 + ';';
+    } else {
+        document.getElementById('code-snippet-order-2').style.display = 'none';
+    }
+    if (orderInput3 != 0) {
+        document.getElementById('code-snippet-order-3').style.display = 'inline';
+        document.getElementById('order-span-3').innerHTML = orderInput3 + ';';
+    } else {
+        document.getElementById('code-snippet-order-3').style.display = 'none';
+    }
+    if (orderInput4 != 0) {
+        document.getElementById('code-snippet-order-4').style.display = 'inline';
+        document.getElementById('order-span-4').innerHTML = orderInput4 + ';';
+    } else {
+        document.getElementById('code-snippet-order-4').style.display = 'none';
+    }
+    document.getElementById('order-item-1').style.order = orderInput1;
+    document.getElementById('order-item-2').style.order = orderInput2;
+    document.getElementById('order-item-3').style.order = orderInput3;
+    document.getElementById('order-item-4').style.order = orderInput4;
+    
+}
 
 
 

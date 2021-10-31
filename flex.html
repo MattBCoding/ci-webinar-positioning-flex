@@ -218,7 +218,7 @@
         <div class="selection-container">
             <div id="gap-select">
                 <label for="gap-slider">gap</label>
-                <input type="range" min="0" max="500" value="0" class="slider" id="gap-slider">
+                <input type="range" min="0" max="200" value="0" class="slider" id="gap-slider">
                 <span id="slider-value">0px</span>
             </div>
             <span class='code-snippet'>gap: <span class='code-value' id='gap-span'></span></span>
@@ -230,6 +230,57 @@
             <div>4</div>
             <div>5</div>
             <div>6</div>
+        </div>
+    </section>
+    
+    <section class='flex-section'>
+        <h2>Order</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <div class="selection-container">
+            <div id="order-select">
+                <label for="order-input-1">Item #1</label>
+                <input type="number" value="0" id="order-input-1">
+                <label for="order-input-2">Item #2</label>
+                <input type="number" value="0" id="order-input-2">
+                <label for="order-input-3">Item #3</label>
+                <input type="number" value="0" id="order-input-3">
+                <label for="order-input-4">Item #4</label>
+                <input type="number" value="0" id="order-input-4">
+            </div>
+            <div class="code-snippet-container">
+                
+                    <span class='code-snippet' id="code-snippet-order-1">
+                        <pre>
+<span class="style-rule">#order-item-1 </span><span class="curly">{</span>
+    order: <span class='code-value' id='order-span-1'></span>
+<span class="curly">}</span></pre>
+</span>
+                    <span class='code-snippet' id="code-snippet-order-2">
+                        <pre>
+<span class="style-rule">#order-item-2 </span><span class="curly">{</span>
+    order: <span class='code-value' id='order-span-2'></span>
+<span class="curly">}</span></pre>
+</span>
+                    <span class='code-snippet' id="code-snippet-order-3">
+                        <pre>
+<span class="style-rule">#order-item-3 </span><span class="curly">{</span>
+    order: <span class='code-value' id='order-span-3'></span>
+<span class="curly">}</span></pre>
+</span>
+                    <span class='code-snippet' id="code-snippet-order-4">
+                        <pre>
+<span class="style-rule">#order-item-4 </span><span class="curly">{</span>
+    order: <span class='code-value' id='order-span-4'></span>
+<span class="curly">}</span></pre>
+</span>
+            </div>
+        </div>
+        <div class="flex order-container" id='order'>
+            <div id="order-item-1">1</div>
+            <div id="order-item-2">2</div>
+            <div id="order-item-3">3</div>
+            <div id="order-item-4">4</div>
         </div>
     </section>
 
