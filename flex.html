@@ -249,27 +249,26 @@
                 <input type="number" value="0" id="order-input-4">
             </div>
             <div class="code-snippet-container">
-                
-                    <span class='code-snippet' id="code-snippet-order-1">
-                        <pre>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-1">
+                    <pre>
 <span class="style-rule">#order-item-1 </span><span class="curly">{</span>
     order: <span class='code-value' id='order-span-1'></span>
 <span class="curly">}</span></pre>
 </span>
-                    <span class='code-snippet' id="code-snippet-order-2">
-                        <pre>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-2">
+                    <pre>
 <span class="style-rule">#order-item-2 </span><span class="curly">{</span>
     order: <span class='code-value' id='order-span-2'></span>
 <span class="curly">}</span></pre>
 </span>
-                    <span class='code-snippet' id="code-snippet-order-3">
-                        <pre>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-3">
+                    <pre>
 <span class="style-rule">#order-item-3 </span><span class="curly">{</span>
     order: <span class='code-value' id='order-span-3'></span>
 <span class="curly">}</span></pre>
 </span>
-                    <span class='code-snippet' id="code-snippet-order-4">
-                        <pre>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-4">
+                    <pre>
 <span class="style-rule">#order-item-4 </span><span class="curly">{</span>
     order: <span class='code-value' id='order-span-4'></span>
 <span class="curly">}</span></pre>
@@ -281,6 +280,105 @@
             <div id="order-item-2">2</div>
             <div id="order-item-3">3</div>
             <div id="order-item-4">4</div>
+        </div>
+    </section>
+
+    <section class='flex-section'>
+        <h2>Grow</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <div class="selection-container">
+            <div id="grow-select">
+                <label for="grow-input-1">Item #1</label>
+                <input type="number" value="0" id="grow-input-1">
+                <label for="grow-input-2">Item #2</label>
+                <input type="number" value="0" id="grow-input-2">
+                <label for="grow-input-3">Item #3</label>
+                <input type="number" value="0" id="grow-input-3">
+                <label for="grow-input-4">Item #4</label>
+                <input type="number" value="0" id="grow-input-4">
+            </div>
+            <div class="code-snippet-container">
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-1">
+                    <pre>
+<span class="style-rule">#grow-item-1 </span><span class="curly">{</span>
+    flew-grow: <span class='code-value' id='grow-span-1'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-2">
+                    <pre>
+<span class="style-rule">#grow-item-2 </span><span class="curly">{</span>
+    flex-grow: <span class='code-value' id='grow-span-2'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-3">
+                    <pre>
+<span class="style-rule">#grow-item-3 </span><span class="curly">{</span>
+    flex-grow: <span class='code-value' id='grow-span-3'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-4">
+                    <pre>
+<span class="style-rule">#grow-item-4 </span><span class="curly">{</span>
+    flex-grow: <span class='code-value' id='grow-span-4'></span>
+<span class="curly">}</span></pre>
+</span>
+            </div>
+        </div>
+        <div class="flex grow-container" id='grow'>
+            <div id="grow-item-1">1</div>
+            <div id="grow-item-2">2</div>
+            <div id="grow-item-3">3</div>
+            <div id="grow-item-4">4</div>
+        </div>
+    </section>
+    <section class='flex-section'>
+        <h2>Shrink</h2>
+        <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+        <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+        <div class="selection-container">
+            <div id="shrink-select">
+                <label for="shrink-input-1">Item #1</label>
+                <input type="number" value="1" id="shrink-input-1">
+                <label for="shrink-input-2">Item #2</label>
+                <input type="number" value="1" id="shrink-input-2">
+                <label for="shrink-input-3">Item #3</label>
+                <input type="number" value="1" id="shrink-input-3">
+                <label for="shrink-input-4">Item #4</label>
+                <input type="number" value="1" id="shrink-input-4">
+            </div>
+            <div class="code-snippet-container">
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-1">
+                    <pre>
+<span class="style-rule">#shrink-item-1 </span><span class="curly">{</span>
+    flew-shrink: <span class='code-value' id='shrink-span-1'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-2">
+                    <pre>
+<span class="style-rule">#shrink-item-2 </span><span class="curly">{</span>
+    flex-shrink: <span class='code-value' id='shrink-span-2'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-3">
+                    <pre>
+<span class="style-rule">#shrink-item-3 </span><span class="curly">{</span>
+    flex-shrink: <span class='code-value' id='shrink-span-3'></span>
+<span class="curly">}</span></pre>
+</span>
+                <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-4">
+                    <pre>
+<span class="style-rule">#shrink-item-4 </span><span class="curly">{</span>
+    flex-shrink: <span class='code-value' id='shrink-span-4'></span>
+<span class="curly">}</span></pre>
+</span>
+            </div>
+        </div>
+        <div class="flex shrink-container" id='shrink'>
+            <div id="shrink-item-1">1</div>
+            <div id="shrink-item-2">2</div>
+            <div id="shrink-item-3">3</div>
+            <div id="shrink-item-4">4</div>
         </div>
     </section>
 

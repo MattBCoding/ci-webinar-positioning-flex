@@ -549,17 +549,22 @@ select {
     align-content: center;
 }
 
-#order-select {
+#order-select,
+#grow-select,
+#shrink-select {
     display: flex;
     flex-direction: column;
 }
 
-#order-select > label {
+#order-select > label,
+#grow-select > label {
     width: 85px;
     display: inline-block;
 }
 
-#order-select > input {
+#order-select > input,
+#grow-select > input,
+#shrink-select > input {
     width: 50px;
 }
 
@@ -577,9 +582,15 @@ select {
     color: yellow;
 }
 
-#code-snippet-order-1,
-#code-snippet-order-2,
-#code-snippet-order-3,
-#code-snippet-order-4 {
+.flex-item-code-snippet {
     display: none;
+}
+
+.grow-container > div {
+    width: 0;
+    min-width: 100px;
+}
+
+.shrink-container > div {
+    width: 500px;
 }

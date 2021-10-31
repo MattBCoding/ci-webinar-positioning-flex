@@ -30,8 +30,23 @@ orderInputs.forEach(element => {
     element.addEventListener('change', changeOrder);
 });
 
+let growInputs = [document.getElementById('grow-input-1'),
+                    document.getElementById('grow-input-2'),
+                    document.getElementById('grow-input-3'),
+                    document.getElementById('grow-input-4')];
+growInputs.forEach(element => {
+    element.addEventListener('change', changeGrow);
+});
 
+let shrinkInputs = [document.getElementById('shrink-input-1'),
+                    document.getElementById('shrink-input-2'),
+                    document.getElementById('shrink-input-3'),
+                    document.getElementById('shrink-input-4')];
+shrinkInputs.forEach(element => {
+    element.addEventListener('change', changeShrink);
+});
 
+// functions that do things
 function changeDirection() {
     document.getElementById('flex-direction-span').innerHTML = flexDirectionSelect.value + ';';
     document.getElementById('flex-direction').style.flexDirection = flexDirectionSelect.value;
@@ -108,8 +123,81 @@ function changeOrder() {
     document.getElementById('order-item-2').style.order = orderInput2;
     document.getElementById('order-item-3').style.order = orderInput3;
     document.getElementById('order-item-4').style.order = orderInput4;
+};
+
+function changeGrow() {
+    let growInput1 = document.getElementById('grow-input-1').value;
+    let growInput2 = document.getElementById('grow-input-2').value;
+    let growInput3 = document.getElementById('grow-input-3').value;
+    let growInput4 = document.getElementById('grow-input-4').value;
     
-}
+    if (growInput1 != 0) {
+        document.getElementById('code-snippet-grow-1').style.display = 'inline';
+        document.getElementById('grow-span-1').innerHTML = growInput1 + ';';
+    } else {
+        document.getElementById('code-snippet-grow-1').style.display = 'none';
+    }
+    if (growInput2 != 0) {
+        document.getElementById('code-snippet-grow-2').style.display = 'inline';
+        document.getElementById('grow-span-2').innerHTML = growInput2 + ';';
+    } else {
+        document.getElementById('code-snippet-grow-2').style.display = 'none';
+    }
+    if (growInput3 != 0) {
+        document.getElementById('code-snippet-grow-3').style.display = 'inline';
+        document.getElementById('grow-span-3').innerHTML = growInput3 + ';';
+    } else {
+        document.getElementById('code-snippet-grow-3').style.display = 'none';
+    }
+    if (growInput4 != 0) {
+        document.getElementById('code-snippet-grow-4').style.display = 'inline';
+        document.getElementById('grow-span-4').innerHTML = growInput4 + ';';
+    } else {
+        document.getElementById('code-snippet-order-4').style.display = 'none';
+    }
+    document.getElementById('grow-item-1').style.flexGrow = growInput1;
+    document.getElementById('grow-item-3').style.flexGrow = growInput3;
+    document.getElementById('grow-item-2').style.flexGrow = growInput2;
+    document.getElementById('grow-item-4').style.flexGrow = growInput4;
+};
+
+function changeShrink() {
+    let shrinkInput1 = document.getElementById('shrink-input-1').value;
+    let shrinkInput2 = document.getElementById('shrink-input-2').value;
+    let shrinkInput3 = document.getElementById('shrink-input-3').value;
+    let shrinkInput4 = document.getElementById('shrink-input-4').value;
+    
+    if (shrinkInput1 != 1) {
+        document.getElementById('code-snippet-shrink-1').style.display = 'inline';
+        document.getElementById('shrink-span-1').innerHTML = shrinkInput1 + ';';
+    } else {
+        document.getElementById('code-snippet-shrink-1').style.display = 'none';
+    }
+    if (shrinkInput2 != 1) {
+        document.getElementById('code-snippet-shrink-2').style.display = 'inline';
+        document.getElementById('shrink-span-2').innerHTML = shrinkInput2 + ';';
+    } else {
+        document.getElementById('code-snippet-shrink-2').style.display = 'none';
+    }
+    if (shrinkInput3 != 1) {
+        document.getElementById('code-snippet-shrink-3').style.display = 'inline';
+        document.getElementById('shrink-span-3').innerHTML = shrinkInput3 + ';';
+    } else {
+        document.getElementById('code-snippet-shrink-3').style.display = 'none';
+    }
+    if (shrinkInput4 != 1) {
+        document.getElementById('code-snippet-shrink-4').style.display = 'inline';
+        document.getElementById('shrink-span-4').innerHTML = shrinkInput4 + ';';
+    } else {
+        document.getElementById('code-snippet-order-4').style.display = 'none';
+    }
+    document.getElementById('shrink-item-1').style.flexShrink = shrinkInput1;
+    document.getElementById('shrink-item-3').style.flexShrink = shrinkInput3;
+    document.getElementById('shrink-item-2').style.flexShrink = shrinkInput2;
+    document.getElementById('shrink-item-4').style.flexShrink = shrinkInput4;
+};
+
+
 
 
 
