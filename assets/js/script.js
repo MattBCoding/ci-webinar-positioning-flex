@@ -20,37 +20,43 @@ let gapSelect = document.getElementById('gap-slider');
 gapSelect.addEventListener('click', changeGap);
 
 function changeDirection() {
-    console.log(flexDirectionSelect.value);
+    document.getElementById('flex-direction-span').innerHTML = flexDirectionSelect.value + ';';
     document.getElementById('flex-direction').style.flexDirection = flexDirectionSelect.value;
 };
 
 function changeWrap() {
     console.log(flexWrapSelect.value);
+    document.getElementById('flex-wrap-span').innerHTML = flexWrapSelect.value + ';';
     document.getElementById('flex-wrap').style.flexWrap = flexWrapSelect.value;
 }
 
 function changeFlow() {
     console.log(flexFlowSelect.value);
+    document.getElementById('flex-flow-span').innerHTML = flexFlowSelect.value + ';';
     document.getElementById('flex-flow').style.flexFlow = flexFlowSelect.value;
 }
 
 function changeJustifyContent() {
     console.log(justifyContentSelect.value);
+    document.getElementById('justify-content-span').innerHTML = justifyContentSelect.value + ';';
     document.getElementById('justify-content').style.justifyContent = justifyContentSelect.value;
 }
 
 function changeAlignItems() {
     console.log(alignItemsSelect.value);
+    document.getElementById('align-items-span').innerHTML = alignItemsSelect.value + ';';
     document.getElementById('align-items').style.alignItems = alignItemsSelect.value;
 }
 
 function changeAlignContent() {
     console.log(alignContentSelect.value);
+    document.getElementById('align-content-span').innerHTML = alignContentSelect.value + ';';
     document.getElementById('align-content').style.alignContent = alignContentSelect.value;
 }
 
 function changeGap() {
     console.log(gapSelect.value);
+    document.getElementById('gap-span').innerHTML = `${gapSelect.value}px;`;
     document.getElementById('gap').style.gap = gapSelect.value + 'px';
     document.getElementById('slider-value').innerHTML = gapSelect.value + 'px';
 }

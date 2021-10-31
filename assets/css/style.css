@@ -453,6 +453,7 @@ section p {
     color: #fff;
     padding: 20px;
     height: fit-content;
+    margin-top: 0;
 }
 
 .flex {
@@ -474,11 +475,33 @@ section p {
     line-height: 6rem;
 }
 
+.selection-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.code-snippet {
+    background-color: #000;
+    color:var(--primary);
+    font-style: italic;
+    min-width: 300px;
+}
+
+.code-value {
+    color: var(--offwhite);
+}
+
+select {
+    min-width: 200px;
+}
+
 #flex-wrap,
 #flex-flow {
     resize: both;
     overflow: auto;
     min-height: 400px;
+    border: 2px solid red;
 }
 
 #align-items {
@@ -511,11 +534,12 @@ section p {
 }
 
 #gap-select {
-    width: 100%;
+    display: inline-block;
+    width: 50%;
 }
 
 #gap-slider {
-    width: 30%;
+    width: 80%;
     min-width: 320px;
 }
 
